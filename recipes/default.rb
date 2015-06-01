@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-package "python-pip"
+include_recipe 'python::default'
 
-easy_install_package "cloudmonkey" do
-  version node['cloudmonkey']['version']
+python_pip "cloudmonkey" do
+  version "#{node['cloudmonkey']['version']}"
 end
