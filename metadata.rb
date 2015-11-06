@@ -8,3 +8,5 @@ version          '0.1.1'
 
 supports         'redhat'
 supports         'centos'
+
+depends          'python', '= 1.4.6'
