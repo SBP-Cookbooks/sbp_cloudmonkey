@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-include_recipe 'python::default'
+include_recipe 'poise-python::default'
 
-python_pip "cloudmonkey" do
+python_package "cloudmonkey" do
   version "#{node['cloudmonkey']['version']}"
 end
