@@ -2,7 +2,7 @@ name             'sbp_cloudmonkey'
 maintainer       'Sander van Harmelen'
 maintainer_email 'svanharmelen@schubergphilis.com'
 chef_version     '>= 12.14'
-license          'Apache 2.0'
+license          'Apache-2.0'
 description      'Installs/Configures cloudmonkey'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 issues_url       'https://github.com/schubergphilis/sbp_cloudmonkey/issues'
