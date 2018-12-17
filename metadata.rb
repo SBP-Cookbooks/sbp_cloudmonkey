@@ -6,7 +6,8 @@ description      'Installs/Configures cloudmonkey'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.3'
 
-supports         'redhat'
-supports         'centos'
+%w(debian centos redhat ubuntu).each do |os|
+  supports os
+end
 
 depends 'poise-python', '~> 1.6.0'
