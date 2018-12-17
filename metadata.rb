@@ -10,4 +10,4 @@ version          '0.1.3'
   supports os
 end
 
-depends 'poise-python', '~> 1.6.0'
+depends 'poise-python', '~> 1.7.0'
