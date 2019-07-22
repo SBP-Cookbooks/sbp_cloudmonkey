@@ -19,6 +19,6 @@
 
 include_recipe 'poise-python::default'
 
-python_package "cloudmonkey" do
-  version "#{node['cloudmonkey']['version']}"
+python_package 'cloudmonkey' do
+  version node['cloudmonkey']['version'].to_s
 end
