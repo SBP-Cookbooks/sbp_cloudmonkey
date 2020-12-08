@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: sbp_cloudmonkey
+# Cookbook:: sbp_cloudmonkey
 # Recipe:: default
 #
-# Copyright 2014, Schuberg Philis
+# Copyright:: Schuberg Philis
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,8 +17,16 @@
 # limitations under the License.
 #
 
-include_recipe 'poise-python::default'
-
-python_package 'cloudmonkey' do
-  version node['cloudmonkey']['version'].to_s
+remote_file node['sbp_cloudmonkey']['binary'] do
+  source "#{node['sbp_cloudmonkey']['url']}#{node['sbp_cloudmonkey']['version']}/#{node['sbp_cloudmonkey']['file']}"
+  owner 'root'
+  group 'root'
+  backup false
+  mode '0755'
+  action :create
 end
+
+link node['sbp_cloudmonkey']['link'] do
+  to node['sbp_cloudmonkey']['binary']
+  action :create
+end if node['sbp_cloudmonkey']['create_cloudmonkey_link']
