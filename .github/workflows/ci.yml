@@ -64,7 +64,7 @@ jobs:
   release:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    needs: [mdl, yamllint, delivery]
+    needs: [mdl, yamllint, delivery, dokken]
     steps:
       - name: Check out code
         uses: actions/checkout@master
