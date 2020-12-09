@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: sbp_cloudmonkey
+# Cookbook:: sbp_cloudmonkey
 # Attribute:: default
 #
-# Copyright 2014, Schuberg Philis
+# Copyright:: Schuberg Philis
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,4 +17,9 @@
 # limitations under the License.
 #
 
-default['cloudmonkey']['version'] = nil
+default['sbp_cloudmonkey']['source'] = nil
+default['sbp_cloudmonkey']['version'] = '6.1.0'
+
+default['sbp_cloudmonkey']['binary'] = '/usr/local/bin/cmk'
+default['sbp_cloudmonkey']['create_symlink'] = true
+default['sbp_cloudmonkey']['link'] = '/usr/local/bin/cloudmonkey'
