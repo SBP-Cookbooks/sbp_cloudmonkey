@@ -32,4 +32,4 @@ end
 link node['sbp_cloudmonkey']['link'] do
   to node['sbp_cloudmonkey']['binary']
   action :create
-end if node['sbp_cloudmonkey']['create_cloudmonkey_link']
+end if node['sbp_cloudmonkey']['create_symlink']
