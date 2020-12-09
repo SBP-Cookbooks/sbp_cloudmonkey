@@ -84,7 +84,7 @@ jobs:
             echo "Cookbook version is already tagged, skipping job"
             exit 0
           fi
-          if ! knife supermarket show $COOKBOOK_NAME $COOKBOOK_VERSION; then
+          if knife supermarket show $COOKBOOK_NAME $COOKBOOK_VERSION | grep -q $COOKBOOK_VERSION; then
             echo "Cookbook version already exists on supermarket, skipping job"
             exit 0
           fi
