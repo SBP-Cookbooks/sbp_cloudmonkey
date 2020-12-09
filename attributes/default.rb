@@ -17,9 +17,8 @@
 # limitations under the License.
 #
 
-default['sbp_cloudmonkey']['url'] = 'https://github.com/apache/cloudstack-cloudmonkey/releases/download/'
+default['sbp_cloudmonkey']['source'] = nil
 default['sbp_cloudmonkey']['version'] = '6.1.0'
-default['sbp_cloudmonkey']['file'] = 'cmk.linux.x86-64'
 
 default['sbp_cloudmonkey']['binary'] = '/usr/local/bin/cmk'
 default['sbp_cloudmonkey']['create_cloudmonkey_link'] = true

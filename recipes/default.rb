@@ -17,8 +17,11 @@
 # limitations under the License.
 #
 
+url = "https://github.com/apache/cloudstack-cloudmonkey/releases/download/#{node['sbp_cloudmonkey']['version']}/cmk.linux.x86-64"
+url = node['sbp_cloudmonkey']['source'] unless node['sbp_cloudmonkey']['source'].nil?
+
 remote_file node['sbp_cloudmonkey']['binary'] do
-  source "#{node['sbp_cloudmonkey']['url']}#{node['sbp_cloudmonkey']['version']}/#{node['sbp_cloudmonkey']['file']}"
+  source url
   owner 'root'
   group 'root'
   backup false
