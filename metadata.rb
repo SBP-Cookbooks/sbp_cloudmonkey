@@ -8,7 +8,7 @@ issues_url       'https://github.com/sbp-cookbooks/sbp_cloudmonkey/issues'
 source_url       'https://github.com/sbp-cookbooks/sbp_cloudmonkey'
 version          '0.2.0'
 
-supports centos
-supports debian
-supports redhat
-supports ubuntu
+supports 'centos'
+supports 'debian'
+supports 'redhat'
+supports 'ubuntu'
