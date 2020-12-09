@@ -10,3 +10,8 @@ describe file('/usr/local/bin/cloudmonkey') do
   it { should be_symlink }
   it { should be_linked_to '/usr/local/bin/cmk' }
 end
+
+describe bash('cmk version') do
+  its('exit_status') { should eq(0) }
+  its('stdout')      { should match('CloudMonkey') }
+end
