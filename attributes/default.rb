@@ -21,5 +21,5 @@ default['sbp_cloudmonkey']['source'] = nil
 default['sbp_cloudmonkey']['version'] = '6.1.0'
 
 default['sbp_cloudmonkey']['binary'] = '/usr/local/bin/cmk'
-default['sbp_cloudmonkey']['create_cloudmonkey_link'] = true
+default['sbp_cloudmonkey']['create_symlink'] = true
 default['sbp_cloudmonkey']['link'] = '/usr/local/bin/cloudmonkey'
